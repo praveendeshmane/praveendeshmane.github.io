@@ -124,3 +124,6 @@ Soft skills are critical for a project manager to effectively lead teams, manage
 
 ### Conclusion
 Mastering these soft skills can significantly enhance a project manager’s effectiveness, enabling them to lead teams successfully, manage conflicts, and navigate the complex challenges of delivering projects. Cultivating these skills helps in building stronger relationships, driving performance, and ensuring smoother project execution.
+
+# AI Taxi
+# https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr202101fa3.html

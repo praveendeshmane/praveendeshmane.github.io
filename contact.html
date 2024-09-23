@@ -95,7 +95,7 @@
 								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://github.com/praveendeshmane"><i class="fa-brands fa-github fa-fw"></i></a></li>
 
 								
-								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://github.com/praveendeshmane"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
+								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://www.linkedin.com/in/dpraveen/"><i class="fa-brands fa-linkedin-in fa-fw"></i></a></li>
 								
 
 								<li class="list-inline-item me-0 me-md-1 me-lg-2"><a href="https://stackoverflow.com/users/1564677/praveen-deshmane"><i class="fa-brands fa-stack-overflow fa-fw"></i></a></li>
@@ -145,16 +145,16 @@
 						        <div class="row g-3">                                                           
 					                <div class="col-md-6">
 					                    <label class="sr-only" for="cname">Name</label>
-					                    <input type="text" class="form-control" id="cname" name="name" placeholder="Name" minlength="2" required="" >
+					                    <input type="text" class="form-control" id="from_name" name="from_name" placeholder="Name" minlength="2" required="" >
 					                </div>                    
 					                <div class="col-md-6">
 					                    <label class="sr-only" for="cemail">Email</label>
-					                    <input type="email" class="form-control" id="cemail" name="email" placeholder="Email" required="" >
+					                    <input type="email" class="form-control" id="reply_to" name="reply_to" placeholder="Email" required="" >
 					                </div>
 					                
 					                <div class="col-12">
 					                    <label class="sr-only" for="cmessage">Your message</label>
-					                    <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="10" required=""></textarea>
+					                    <textarea class="form-control" id="message" name="message" placeholder="Enter your message" rows="10" required=""></textarea>
 					                </div>
 					                 <div class="col-12">
 					                    <button type="submit" class="btn w-100 btn-secondary py-2">Submit</button>
@@ -173,7 +173,7 @@
 	</div><!--//container-->
 	
 	<footer class="footer text-center py-4">
-		<small class="copyright"> Copyright &copy; <a href="https://themes.3rdwavemedia.com/" target="_blank">Praveen Deshmane</a></small>
+		<small class="copyright"> Copyright &copy; <a href="https://praveendeshmane.github.io/" target="_blank">Praveen Deshmane</a></small>
 	</footer>
 	
 	<!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
@@ -207,5 +207,35 @@
 	
 	<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
 	<script src="assets/js/demo/style-switcher.js"></script>
+
+	<!-- EmailJS -->  
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+	<script type="text/javascript">
+        (function(){
+            // Initialize EmailJS with your public key
+            emailjs.init("O3PLMP8fliwMInZQ7");
+        })();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting the usual way
+
+                // Send email using EmailJS
+                emailjs.sendForm('praveendeshmane', 'template_pwnazfo', form)
+                    .then(function(response) {
+                        console.log('Email sent successfully!', response.status, response.text);
+                        // Clear the form fields
+                        form.reset();
+                        alert('Email sent successfully!');
+                    }, function(error) {
+                        console.log('Failed to send email.', error);
+                        alert('Failed to send email.');
+                    });
+            });
+        });
+    </script>
 
 </body>
