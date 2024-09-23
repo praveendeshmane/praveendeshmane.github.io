@@ -226,7 +226,7 @@
                 // Send email using EmailJS
                 emailjs.sendForm('praveendeshmane', 'template_pwnazfo', form)
                     .then(function(response) {
-                        console.log('Message is sent successfully!', response.status, response.text);
+                        console.log('Message has been sent successfully!', response.status, response.text);
                         // Clear the form fields
                         form.reset();
                         alert('Email sent successfully!');
