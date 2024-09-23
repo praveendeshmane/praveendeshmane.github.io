@@ -226,12 +226,12 @@
                 // Send email using EmailJS
                 emailjs.sendForm('praveendeshmane', 'template_pwnazfo', form)
                     .then(function(response) {
-                        console.log('Email sent successfully!', response.status, response.text);
+                        console.log('Message is sent successfully!', response.status, response.text);
                         // Clear the form fields
                         form.reset();
                         alert('Email sent successfully!');
                     }, function(error) {
-                        console.log('Failed to send email.', error);
+                        console.log('Failed to send message.', error);
                         alert('Failed to send email.');
                     });
             });
