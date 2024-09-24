@@ -12978,7 +12978,7 @@ a.more-link .link-arrow .bi {
   padding: 0;
 }
 .featured-post-item .post-item-image {
-  background-image: url("../images/blog/blog-post-thumb.jpeg");
+  /* background-image: url("../images/blog/blog-post-thumb.jpeg"); */
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
